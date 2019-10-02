@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.scss'
+import Button from '@material-ui/core/Button'
 import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import Button from '@material-ui/core/Button'
 
-const App = () => {
+const App = props => {
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
@@ -34,6 +34,10 @@ const App = () => {
           Sign up
         </Button>
       </div>
+      <select className="language-list">
+        <option value="en">English</option>
+        <option value="rus">Русский</option>
+      </select>
     </div>
   )
 }

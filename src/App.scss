@@ -10,10 +10,19 @@
     display: flex;
     justify-content: flex-end;
     position: absolute;
+    right: 150px;
     top: 5px;
-    right: 150px
   }
-  button {
-    margin-left: 30px;
+  button:not(:first-child) {
+    margin: 0 40px 0 20px;
   }
+}
+.language-list {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  position: absolute;
+  right: 40px;
+  top: 14px;
 }
