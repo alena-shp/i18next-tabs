@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.scss'
+
 import Button from '@material-ui/core/Button'
 import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
@@ -23,8 +24,8 @@ const App = props => {
           centered
         >
           <Tab label="How it works" />
-          <Tab label="Why we" />
           <Tab label="About us" />
+          <Tab label="Events" />
           <Tab label="Contacts" />
         </Tabs>
       </Paper>
@@ -36,10 +37,10 @@ const App = props => {
       </div>
       <select className="language-list">
         <option value="en">English</option>
-        <option value="rus">Русский</option>
+        <option value="ru">Русский</option>
       </select>
     </div>
   )
 }
 
-export default App
+export default translate('common')(App)
