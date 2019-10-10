@@ -1,19 +1,25 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import en from '../locale/en'
-import fr from './../locale/fr'
-import ru from './../locale/ru'
+import en from './../language/en'
+import ru from './../language/ru'
 
 i18n.use(initReactI18next).init({
-  debug: true,
-  initImmediate: false,
-  preload: ['en', 'fr', 'ru'],
-  fallbackLng: 'en',
-  lng: 'en',
   resources: {
     en,
-    fr,
     ru
+  },
+  fallbackLng: 'en',
+  lng: 'en',
+  debug: process.env.NODE_ENV !== 'production',
+  ns: ['translations'],
+  defaultNS: 'translations',
+  keySeparator: false,
+  interpolation: {
+    escapeValue: false,
+    formatSeparator: ','
+  },
+  react: {
+    wait: true
   }
 })
 

@@ -1,16 +1,24 @@
-import React from 'react'
-import './App.scss'
-
+import React, { useState } from 'react'
+import Select from 'react-select'
+import { withTranslation } from 'react-i18next'
 import Button from '@material-ui/core/Button'
 import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
+import './App.scss'
+import { options } from './config/options'
 
 const App = props => {
   const [value, setValue] = React.useState(0)
+  const [lang, setLang] = useState(options[0])
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
+  }
+
+  let changeLang = lang => {
+    setLang(lang)
+    props.i18n.changeLanguage(lang.value)
   }
 
   return (
@@ -30,17 +38,20 @@ const App = props => {
         </Tabs>
       </Paper>
       <div className="wrapper-button">
-        <Button>Sign in</Button>
+        <Button>{props.t('Sign in')}</Button>
         <Button variant="contained" color="secondary">
-          Sign up
+          {props.t('Sign up')}
         </Button>
       </div>
-      <select className="language-list">
-        <option value="en">English</option>
-        <option value="ru">Русский</option>
-      </select>
+      <Select
+        defaultValue={options[0]}
+        options={options}
+        value={lang}
+        onChange={changeLang}
+        className="language-list"
+      />
     </div>
   )
 }
 
-export default App
+export default withTranslation()(App)

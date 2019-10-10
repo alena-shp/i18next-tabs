@@ -1,10 +1,10 @@
 {
-  "translations" : {
-  "How it works": "How it works",
-  "About us": "About us",
-  "Events": "Events",
-  "Contacts": "Contacts",
-  "Sign in": "Sign in",
-  "Sign up": "Sign up"
+  "translations": {
+    "How it works": "How it works",
+    "About us": "About us",
+    "Events": "Events",
+    "Contacts": "Contacts",
+    "Sign in": "Sign in",
+    "Sign up": "Sign up"
   }
 }
