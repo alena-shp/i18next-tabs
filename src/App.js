@@ -31,25 +31,25 @@ const App = props => {
           textColor="primary"
           centered
         >
-          <Tab label="How it works" />
-          <Tab label="About us" />
-          <Tab label="Events" />
-          <Tab label="Contacts" />
+          <Tab label={props.t('How it works')} />
+          <Tab label={props.t('About us')} />
+          <Tab label={props.t('Events')} />
+          <Tab label={props.t('Contacts')} />
         </Tabs>
       </Paper>
-      <div className="wrapper-button">
+      <div className="wrapper-handling">
         <Button>{props.t('Sign in')}</Button>
         <Button variant="contained" color="secondary">
           {props.t('Sign up')}
         </Button>
+        <Select
+          defaultValue={options[0]}
+          options={options}
+          value={lang}
+          onChange={changeLang}
+          className="language-list"
+        />
       </div>
-      <Select
-        defaultValue={options[0]}
-        options={options}
-        value={lang}
-        onChange={changeLang}
-        className="language-list"
-      />
     </div>
   )
 }
