@@ -1,8 +1,10 @@
 {
   "translations" : {
-    "menu-text-one": "How it works",
-  "menu-text-two": "About us",
-  "menu-text-three": "Events",
-  "menu-text-four": "Contacts"
+  "How it works": "How it works",
+  "About us": "About us",
+  "Events": "Events",
+  "Contacts": "Contacts",
+  "Sign in": "Sign in",
+  "Sign up": "Sign up"
   }
 }

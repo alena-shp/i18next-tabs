@@ -1,8 +1,10 @@
 {
   "translations": {
-    "menu-text-one": "Как это работает",
-    "menu-text-two": "О нас",
-    "menu-text-three": "События",
-    "menu-text-four": "Контакты"
+    "How it works": "Как это работает",
+    "About us": "О нас",
+    "Events": "События",
+    "Contacts": "Контакты",
+    "Sign in": "Войти",
+    "Sign up": "Зарегистрироваться"
   }
 }

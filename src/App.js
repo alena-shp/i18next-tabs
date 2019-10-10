@@ -43,4 +43,4 @@ const App = props => {
   )
 }
 
-export default translate('common')(App)
+export default App
